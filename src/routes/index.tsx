@@ -146,13 +146,38 @@ function LinksPage() {
             </span>
           </div>
 
-          <h1 className="mt-5">
+          <h1 className="mt-6">
             <span className="sr-only">Francisco Chagas</span>
-            <img
-              src={logoImg}
-              alt="Logotipo Francisco Chagas"
-              className="h-20 sm:h-24 w-auto object-contain drop-shadow-[0_0_18px_hsl(var(--neon)/0.45)]"
-            />
+            <a
+              href="#top"
+              className="group relative inline-flex items-center justify-center rounded-2xl p-[2px] transition-all duration-500 hover:scale-[1.04]"
+              aria-label="Francisco Chagas"
+            >
+              {/* glow halo */}
+              <span
+                className="pointer-events-none absolute -inset-3 rounded-3xl opacity-40 blur-2xl transition-all duration-500 group-hover:opacity-90 group-hover:-inset-5"
+                style={{ background: "var(--gradient-neon)" }}
+                aria-hidden
+              />
+              {/* gradient border */}
+              <span
+                className="pointer-events-none absolute inset-0 rounded-2xl opacity-70 transition-opacity duration-500 group-hover:opacity-100"
+                style={{ background: "var(--gradient-neon)" }}
+                aria-hidden
+              />
+              {/* sheen sweep */}
+              <span
+                className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl"
+                aria-hidden
+              >
+                <span className="absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 transition-all duration-700 group-hover:left-[120%] group-hover:opacity-100" />
+              </span>
+              <img
+                src={logoImg}
+                alt="Logotipo Francisco Chagas"
+                className="relative h-20 sm:h-24 w-auto rounded-2xl bg-card/80 px-5 py-3 object-contain backdrop-blur-md shadow-neon transition-all duration-500 group-hover:shadow-[0_0_60px_-5px_var(--neon)]"
+              />
+            </a>
           </h1>
           <p className="mt-2 max-w-sm text-sm sm:text-base text-muted-foreground">
             Desenvolvedor & Runner — projetos, redes e contato em um único hub.
