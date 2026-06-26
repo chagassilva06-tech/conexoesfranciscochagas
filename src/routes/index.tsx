@@ -122,7 +122,7 @@ function LinksPage() {
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-xl px-5 pb-16 pt-12 sm:pt-16">
+      <div className="relative mx-auto max-w-xl sm:max-w-4xl px-5 pb-16 pt-12 sm:pt-16">
         {/* Header */}
         <header className="flex flex-col items-center text-center animate-float-up">
           <div className="relative">
