@@ -13,6 +13,7 @@ import {
   Sparkles,
 } from "lucide-react";
 import profileImg from "@/assets/profile-francisco.png";
+import logoImg from "@/assets/logo-francisco.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -145,8 +146,13 @@ function LinksPage() {
             </span>
           </div>
 
-          <h1 className="mt-5 text-3xl sm:text-4xl font-bold tracking-tight">
-            Francisco <span className="text-neon">Chagas</span>
+          <h1 className="mt-5">
+            <span className="sr-only">Francisco Chagas</span>
+            <img
+              src={logoImg}
+              alt="Logotipo Francisco Chagas"
+              className="h-20 sm:h-24 w-auto object-contain drop-shadow-[0_0_18px_hsl(var(--neon)/0.45)]"
+            />
           </h1>
           <p className="mt-2 max-w-sm text-sm sm:text-base text-muted-foreground">
             Desenvolvedor & Runner — projetos, redes e contato em um único hub.
