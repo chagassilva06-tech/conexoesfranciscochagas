@@ -5,10 +5,10 @@ import {
   Facebook,
   Instagram,
   Github,
+  Youtube,
   Globe,
   Activity,
   Trophy,
-  MessageCircle,
   MapPin,
   Sparkles,
 } from "lucide-react";
@@ -67,11 +67,11 @@ const links: LinkItem[] = [
     icon: Trophy,
   },
   {
-    label: "WhatsApp",
-    subtitle: "Fale comigo agora",
-    preview: "Resposta rápida para projetos, parcerias e dúvidas. Chamada direta no WhatsApp.",
-    href: "https://wa.me/5500000000000",
-    icon: MessageCircle,
+    label: "YouTube",
+    subtitle: "Vídeos e conteúdos",
+    preview: "Acompanhe meus vídeos, vlogs de provas e conteúdos no canal do YouTube.",
+    href: "https://www.youtube.com/channel/UC86rPPNR-uJvCECzBxs5z_g",
+    icon: Youtube,
   },
   {
     label: "LinkedIn",
