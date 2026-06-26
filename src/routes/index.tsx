@@ -12,7 +12,7 @@ import {
   MapPin,
   Sparkles,
 } from "lucide-react";
-import profileImg from "@/assets/profile-francisco.jpg";
+import profileImg from "@/assets/profile-francisco.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -159,7 +159,7 @@ function LinksPage() {
 
         {/* Links */}
         <section
-          className="mt-10 space-y-3"
+          className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2"
           aria-label="Lista de links"
         >
           {links.map((item, i) => {
