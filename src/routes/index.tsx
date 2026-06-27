@@ -271,29 +271,6 @@ function LinksPage() {
           })}
         </section>
 
-        {/* About / Project summary */}
-        <section
-          className="mt-12 rounded-2xl border border-border bg-card/60 p-5 backdrop-blur animate-float-up"
-          style={{ animationDelay: "700ms" }}
-        >
-          <h3 className="text-lg font-semibold text-foreground">
-            Sobre este <span className="text-neon">hub</span>
-          </h3>
-          <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-            Página de links personalizada para centralizar contatos, redes e projetos com
-            identidade visual coerente — leve, responsiva e fácil de manter.
-          </p>
-          <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
-            {["HTML", "CSS", "JavaScript", "UX/UI"].map((t) => (
-              <span
-                key={t}
-                className="rounded-md border border-border bg-background/50 px-2 py-1 text-center text-muted-foreground"
-              >
-                {t}
-              </span>
-            ))}
-          </div>
-        </section>
 
         {/* Footer */}
         <footer className="mt-10 text-center text-xs text-muted-foreground">
