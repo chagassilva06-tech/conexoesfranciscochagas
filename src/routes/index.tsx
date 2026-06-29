@@ -113,6 +113,13 @@ const links: LinkItem[] = [
 function LinksPage() {
   const [hovered, setHovered] = useState<number | null>(null);
 
+  const openExternalLink = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (!href.startsWith("http")) return;
+
+    event.preventDefault();
+    window.open(href, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <main className="relative min-h-screen overflow-hidden">
       {/* Background grid */}
@@ -207,6 +214,7 @@ function LinksPage() {
                   href={item.href}
                   target={external ? "_blank" : undefined}
                   rel={external ? "noopener noreferrer" : undefined}
+                  onClick={(event) => openExternalLink(event, item.href)}
                   onMouseEnter={() => setHovered(i)}
                   onMouseLeave={() => setHovered((h) => (h === i ? null : h))}
                   onFocus={() => setHovered(i)}
