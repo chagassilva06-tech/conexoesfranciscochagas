@@ -70,7 +70,7 @@ const links: LinkItem[] = [
     label: "YouTube",
     subtitle: "Vídeos e conteúdos",
     preview: "Acompanhe meus vídeos, vlogs de provas e conteúdos no canal do YouTube.",
-    href: "https://www.youtube.com/channel/UC86rPPNR-uJvCECzBxs5z_g",
+    href: "https://www.youtube.com/@FrankChagass",
     icon: Youtube,
   },
   {
