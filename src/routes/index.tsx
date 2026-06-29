@@ -56,14 +56,14 @@ const links: LinkItem[] = [
     label: "Portfólio Web",
     subtitle: "Projetos de desenvolvimento e UI",
     preview: "Veja meus projetos web, estudos de caso e tecnologias que utilizo no dia a dia.",
-    href: "#portfolio-web",
+    href: "https://neon-flow-portfolio-93.lovable.app/",
     icon: Globe,
   },
   {
     label: "Portfólio Runner",
     subtitle: "Provas, treinos e conquistas",
     preview: "Acompanhe meu projeto pessoal como corredor: resultados, rotinas e bastidores.",
-    href: "https://chagassilva06-tech.github.io/Runner-responsiveoficialfrancisco/",
+    href: "https://runnerfrancisco.lovable.app/",
     icon: Trophy,
   },
   {
