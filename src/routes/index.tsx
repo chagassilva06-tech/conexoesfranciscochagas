@@ -56,7 +56,7 @@ const links: LinkItem[] = [
     label: "Portfólio Web",
     subtitle: "Projetos de desenvolvimento e UI",
     preview: "Veja meus projetos web, estudos de caso e tecnologias que utilizo no dia a dia.",
-    href: "https://neon-flow-portfolio-93.lovable.app/",
+    href: "https://portfoliochagas.lovable.app/",
     icon: Globe,
   },
   {
