@@ -219,7 +219,7 @@ function LinksPage() {
                   onMouseLeave={() => setHovered((h) => (h === i ? null : h))}
                   onFocus={() => setHovered(i)}
                   onBlur={() => setHovered((h) => (h === i ? null : h))}
-                  className="group relative block overflow-hidden rounded-2xl border border-border bg-card/70 px-4 py-4 backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-transparent hover:shadow-neon focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  className="group relative block overflow-hidden rounded-2xl border border-border bg-card/70 px-3 sm:px-4 py-3 sm:py-4 backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-transparent hover:shadow-neon focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   {/* hover gradient sweep */}
                   <span
