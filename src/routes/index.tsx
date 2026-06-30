@@ -244,7 +244,7 @@ function LinksPage() {
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <h2 className="truncate text-base sm:text-lg font-semibold text-foreground">
+                      <h2 className="truncate text-sm sm:text-base md:text-lg font-semibold text-foreground">
                         {item.label}
                       </h2>
                       <p className="truncate text-xs sm:text-sm text-muted-foreground">
@@ -253,7 +253,7 @@ function LinksPage() {
                     </div>
 
                     <span
-                      className="shrink-0 text-xs font-medium uppercase tracking-wider opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      className="hidden sm:inline shrink-0 text-xs font-medium uppercase tracking-wider opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                       style={{ color: "var(--neon)" }}
                       aria-hidden
                     >
