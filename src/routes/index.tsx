@@ -130,12 +130,12 @@ function LinksPage() {
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-xl sm:max-w-4xl px-5 pb-16 pt-12 sm:pt-16">
+      <div className="relative mx-auto w-full max-w-xl sm:max-w-4xl px-4 sm:px-6 pb-12 sm:pb-16 pt-8 sm:pt-16">
         {/* Header */}
         <header className="flex flex-col items-center text-center animate-float-up">
           <div className="relative">
             <div className="absolute inset-0 rounded-full blur-2xl" style={{ background: "var(--neon)", opacity: 0.35 }} aria-hidden />
-            <div className="relative h-32 w-32 sm:h-36 sm:w-36 rounded-full p-[3px] ring-neon animate-pulse-neon">
+            <div className="relative h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 rounded-full p-[3px] ring-neon animate-pulse-neon">
               <img
                 src={profileImg}
                 alt="Foto de perfil de Francisco Chagas"
@@ -182,7 +182,7 @@ function LinksPage() {
               <img
                 src={logoImg}
                 alt="Logotipo Francisco Chagas"
-                className="relative h-20 sm:h-24 w-auto rounded-2xl bg-card/80 px-5 py-3 object-contain backdrop-blur-md shadow-neon transition-all duration-500 group-hover:shadow-[0_0_60px_-5px_var(--neon)]"
+                className="relative h-14 sm:h-20 md:h-24 w-auto max-w-[80vw] rounded-2xl bg-card/80 px-3 sm:px-5 py-2 sm:py-3 object-contain backdrop-blur-md shadow-neon transition-all duration-500 group-hover:shadow-[0_0_60px_-5px_var(--neon)]"
               />
             </a>
           </h1>
@@ -197,7 +197,7 @@ function LinksPage() {
 
         {/* Links */}
         <section
-          className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2"
+          className="mt-8 sm:mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
           aria-label="Lista de links"
         >
           {links.map((item, i) => {
@@ -219,7 +219,7 @@ function LinksPage() {
                   onMouseLeave={() => setHovered((h) => (h === i ? null : h))}
                   onFocus={() => setHovered(i)}
                   onBlur={() => setHovered((h) => (h === i ? null : h))}
-                  className="group relative block overflow-hidden rounded-2xl border border-border bg-card/70 px-4 py-4 backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-transparent hover:shadow-neon focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  className="group relative block overflow-hidden rounded-2xl border border-border bg-card/70 px-3 sm:px-4 py-3 sm:py-4 backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-transparent hover:shadow-neon focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 >
                   {/* hover gradient sweep */}
                   <span
@@ -231,9 +231,9 @@ function LinksPage() {
                     aria-hidden
                   />
 
-                  <div className="relative flex items-center gap-4">
+                  <div className="relative flex items-center gap-3 sm:gap-4">
                     <div
-                      className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-border bg-background/60 transition-all duration-300 group-hover:scale-110 group-hover:border-transparent"
+                      className="grid h-11 w-11 sm:h-12 sm:w-12 shrink-0 place-items-center rounded-xl border border-border bg-background/60 transition-all duration-300 group-hover:scale-110 group-hover:border-transparent"
                       style={
                         isHovered
                           ? { background: "var(--gradient-neon)", color: "var(--primary-foreground)" }
@@ -244,7 +244,7 @@ function LinksPage() {
                     </div>
 
                     <div className="min-w-0 flex-1">
-                      <h2 className="truncate text-base sm:text-lg font-semibold text-foreground">
+                      <h2 className="truncate text-sm sm:text-base md:text-lg font-semibold text-foreground">
                         {item.label}
                       </h2>
                       <p className="truncate text-xs sm:text-sm text-muted-foreground">
@@ -253,7 +253,7 @@ function LinksPage() {
                     </div>
 
                     <span
-                      className="shrink-0 text-xs font-medium uppercase tracking-wider opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                      className="hidden sm:inline shrink-0 text-xs font-medium uppercase tracking-wider opacity-0 transition-opacity duration-300 group-hover:opacity-100"
                       style={{ color: "var(--neon)" }}
                       aria-hidden
                     >
