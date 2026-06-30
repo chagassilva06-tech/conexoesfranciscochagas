@@ -116,12 +116,14 @@ const links: LinkItem[] = [
 function LinksPage() {
   const [hovered, setHovered] = useState<number | null>(null);
 
-  const openExternalLink = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (!href.startsWith("http")) return;
-
-    event.preventDefault();
-    window.open(href, "_blank", "noopener,noreferrer");
-  };
+  const openExternalLink = useCallback(
+    (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      if (!href.startsWith("http")) return;
+      event.preventDefault();
+      window.open(href, "_blank", "noopener,noreferrer");
+    },
+    [],
+  );
 
   return (
     <main className="relative min-h-screen overflow-hidden">
