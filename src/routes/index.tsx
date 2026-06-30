@@ -130,12 +130,12 @@ function LinksPage() {
         aria-hidden
       />
 
-      <div className="relative mx-auto max-w-xl sm:max-w-4xl px-5 pb-16 pt-12 sm:pt-16">
+      <div className="relative mx-auto w-full max-w-xl sm:max-w-4xl px-4 sm:px-6 pb-12 sm:pb-16 pt-8 sm:pt-16">
         {/* Header */}
         <header className="flex flex-col items-center text-center animate-float-up">
           <div className="relative">
             <div className="absolute inset-0 rounded-full blur-2xl" style={{ background: "var(--neon)", opacity: 0.35 }} aria-hidden />
-            <div className="relative h-32 w-32 sm:h-36 sm:w-36 rounded-full p-[3px] ring-neon animate-pulse-neon">
+            <div className="relative h-24 w-24 sm:h-32 sm:w-32 md:h-36 md:w-36 rounded-full p-[3px] ring-neon animate-pulse-neon">
               <img
                 src={profileImg}
                 alt="Foto de perfil de Francisco Chagas"
