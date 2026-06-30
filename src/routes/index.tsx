@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import {
   Linkedin,
   Facebook,
@@ -12,8 +12,8 @@ import {
   MapPin,
   Sparkles,
 } from "lucide-react";
-import profileImg from "@/assets/profile-francisco.png";
-import logoImg from "@/assets/logo-francisco.png";
+import profileImg from "@/assets/profile-francisco.webp";
+import logoImg from "@/assets/logo-francisco.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -33,6 +33,9 @@ export const Route = createFileRoute("/")({
       { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
+      { rel: "preload", as: "image", href: profileImg, fetchpriority: "high" },
       {
         rel: "stylesheet",
         href: "https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=DM+Sans:wght@400;500;600&display=swap",
@@ -113,12 +116,14 @@ const links: LinkItem[] = [
 function LinksPage() {
   const [hovered, setHovered] = useState<number | null>(null);
 
-  const openExternalLink = (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (!href.startsWith("http")) return;
-
-    event.preventDefault();
-    window.open(href, "_blank", "noopener,noreferrer");
-  };
+  const openExternalLink = useCallback(
+    (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+      if (!href.startsWith("http")) return;
+      event.preventDefault();
+      window.open(href, "_blank", "noopener,noreferrer");
+    },
+    [],
+  );
 
   return (
     <main className="relative min-h-screen overflow-hidden">
@@ -141,6 +146,9 @@ function LinksPage() {
                 alt="Foto de perfil de Francisco Chagas"
                 width={256}
                 height={256}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
                 className="h-full w-full rounded-full object-cover"
               />
             </div>
@@ -182,6 +190,8 @@ function LinksPage() {
               <img
                 src={logoImg}
                 alt="Logotipo Francisco Chagas"
+                loading="lazy"
+                decoding="async"
                 className="relative h-14 sm:h-20 md:h-24 w-auto max-w-[80vw] rounded-2xl bg-card/80 px-3 sm:px-5 py-2 sm:py-3 object-contain backdrop-blur-md shadow-neon transition-all duration-500 group-hover:shadow-[0_0_60px_-5px_var(--neon)]"
               />
             </a>
