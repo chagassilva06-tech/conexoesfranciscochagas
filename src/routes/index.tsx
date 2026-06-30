@@ -197,7 +197,7 @@ function LinksPage() {
 
         {/* Links */}
         <section
-          className="mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2"
+          className="mt-8 sm:mt-10 grid grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4"
           aria-label="Lista de links"
         >
           {links.map((item, i) => {
