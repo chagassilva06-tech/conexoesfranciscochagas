@@ -231,9 +231,9 @@ function LinksPage() {
                     aria-hidden
                   />
 
-                  <div className="relative flex items-center gap-4">
+                  <div className="relative flex items-center gap-3 sm:gap-4">
                     <div
-                      className="grid h-12 w-12 shrink-0 place-items-center rounded-xl border border-border bg-background/60 transition-all duration-300 group-hover:scale-110 group-hover:border-transparent"
+                      className="grid h-11 w-11 sm:h-12 sm:w-12 shrink-0 place-items-center rounded-xl border border-border bg-background/60 transition-all duration-300 group-hover:scale-110 group-hover:border-transparent"
                       style={
                         isHovered
                           ? { background: "var(--gradient-neon)", color: "var(--primary-foreground)" }
