@@ -182,7 +182,7 @@ function LinksPage() {
               <img
                 src={logoImg}
                 alt="Logotipo Francisco Chagas"
-                className="relative h-20 sm:h-24 w-auto rounded-2xl bg-card/80 px-5 py-3 object-contain backdrop-blur-md shadow-neon transition-all duration-500 group-hover:shadow-[0_0_60px_-5px_var(--neon)]"
+                className="relative h-14 sm:h-20 md:h-24 w-auto max-w-[80vw] rounded-2xl bg-card/80 px-3 sm:px-5 py-2 sm:py-3 object-contain backdrop-blur-md shadow-neon transition-all duration-500 group-hover:shadow-[0_0_60px_-5px_var(--neon)]"
               />
             </a>
           </h1>
