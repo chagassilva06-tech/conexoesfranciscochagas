@@ -12,8 +12,8 @@ import {
   MapPin,
   Sparkles,
 } from "lucide-react";
-import profileImg from "@/assets/profile-francisco.png";
-import logoImg from "@/assets/logo-francisco.png";
+import profileImg from "@/assets/profile-francisco.webp";
+import logoImg from "@/assets/logo-francisco.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
