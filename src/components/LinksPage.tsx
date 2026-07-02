@@ -90,6 +90,30 @@ const links: LinkItem[] = [
 
 export function LinksPage() {
   const [hovered, setHovered] = useState<number | null>(null);
+  const [qrOpen, setQrOpen] = useState(false);
+  const [copied, setCopied] = useState(false);
+
+  const handleCopy = useCallback(async () => {
+    try {
+      await navigator.clipboard.writeText(SHARE_URL);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      // ignore
+    }
+  }, []);
+
+  const handleShare = useCallback(async () => {
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: "Francisco Chagas — Hub de Links", url: SHARE_URL });
+      } catch {
+        // ignore
+      }
+    } else {
+      handleCopy();
+    }
+  }, [handleCopy]);
 
   const openExternalLink = useCallback(
     (event: React.MouseEvent<HTMLAnchorElement>, href: string) => {
