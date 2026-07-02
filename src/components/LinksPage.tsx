@@ -303,6 +303,80 @@ export function LinksPage() {
           </p>
         </footer>
       </div>
+
+      {qrOpen && (
+        <div
+          role="dialog"
+          aria-modal="true"
+          aria-label="QR Code para compartilhar"
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 animate-in fade-in-0"
+          onClick={() => setQrOpen(false)}
+        >
+          <div className="absolute inset-0 bg-background/80 backdrop-blur-md" aria-hidden />
+          <div
+            className="relative w-full max-w-sm rounded-3xl border border-border bg-card/90 p-6 shadow-neon backdrop-blur-xl"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              type="button"
+              onClick={() => setQrOpen(false)}
+              aria-label="Fechar"
+              className="absolute right-3 top-3 grid h-9 w-9 place-items-center rounded-full border border-border bg-background/60 text-muted-foreground transition hover:text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+            >
+              <X className="h-4 w-4" />
+            </button>
+
+            <div className="flex flex-col items-center text-center">
+              <div className="inline-flex items-center gap-1.5 rounded-full border border-border bg-background/60 px-3 py-1 text-xs text-muted-foreground">
+                <QrCode className="h-3.5 w-3.5" style={{ color: "var(--neon)" }} />
+                Compartilhar página
+              </div>
+              <h2 className="mt-3 text-lg font-semibold text-foreground">
+                Escaneie o QR Code
+              </h2>
+              <p className="mt-1 text-xs sm:text-sm text-muted-foreground">
+                Aponte a câmera do celular para acessar o hub.
+              </p>
+
+              <div className="mt-5 rounded-2xl p-[3px]" style={{ background: "var(--gradient-neon)" }}>
+                <div className="rounded-xl bg-white p-4">
+                  <QRCodeSVG
+                    value={SHARE_URL}
+                    size={220}
+                    level="M"
+                    marginSize={0}
+                    bgColor="#ffffff"
+                    fgColor="#0a0a0a"
+                  />
+                </div>
+              </div>
+
+              <div className="mt-4 w-full break-all rounded-lg border border-border bg-background/70 px-3 py-2 text-xs text-muted-foreground">
+                {SHARE_URL}
+              </div>
+
+              <div className="mt-4 grid w-full grid-cols-2 gap-2">
+                <button
+                  type="button"
+                  onClick={handleCopy}
+                  className="rounded-xl border border-border bg-background/70 px-3 py-2 text-xs sm:text-sm font-medium text-foreground transition hover:border-transparent hover:shadow-neon focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                >
+                  {copied ? "Copiado ✓" : "Copiar link"}
+                </button>
+                <button
+                  type="button"
+                  onClick={handleShare}
+                  className="inline-flex items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-xs sm:text-sm font-semibold text-primary-foreground transition hover:shadow-neon focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                  style={{ background: "var(--gradient-neon)" }}
+                >
+                  <Share2 className="h-4 w-4" />
+                  Compartilhar
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </main>
   );
 }
