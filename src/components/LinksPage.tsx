@@ -158,38 +158,54 @@ export function LinksPage() {
             </span>
           </div>
 
-          <h1 className="mt-6">
-            <span className="sr-only">Francisco Chagas</span>
-            <a
-              href="#top"
-              className="group relative inline-flex items-center justify-center rounded-2xl p-[2px] transition-all duration-500 hover:scale-[1.04]"
-              aria-label="Francisco Chagas"
+          <div className="mt-6 flex items-center justify-center gap-3">
+            <h1 className="m-0">
+              <span className="sr-only">Francisco Chagas</span>
+              <a
+                href="#top"
+                className="group relative inline-flex items-center justify-center rounded-2xl p-[2px] transition-all duration-500 hover:scale-[1.04]"
+                aria-label="Francisco Chagas"
+              >
+                <span
+                  className="pointer-events-none absolute -inset-3 rounded-3xl opacity-40 blur-2xl transition-all duration-500 group-hover:opacity-90 group-hover:-inset-5"
+                  style={{ background: "var(--gradient-neon)" }}
+                  aria-hidden
+                />
+                <span
+                  className="pointer-events-none absolute inset-0 rounded-2xl opacity-70 transition-opacity duration-500 group-hover:opacity-100"
+                  style={{ background: "var(--gradient-neon)" }}
+                  aria-hidden
+                />
+                <span
+                  className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl"
+                  aria-hidden
+                >
+                  <span className="absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 transition-all duration-700 group-hover:left-[120%] group-hover:opacity-100" />
+                </span>
+                <img
+                  src={logoImg}
+                  alt="Logotipo Francisco Chagas"
+                  loading="lazy"
+                  decoding="async"
+                  className="relative h-14 sm:h-20 md:h-24 w-auto max-w-[70vw] rounded-2xl bg-card/80 px-3 sm:px-5 py-2 sm:py-3 object-contain backdrop-blur-md shadow-neon transition-all duration-500 group-hover:shadow-[0_0_60px_-5px_var(--neon)]"
+                />
+              </a>
+            </h1>
+            <button
+              type="button"
+              onClick={() => setQrOpen(true)}
+              aria-label="Mostrar QR Code para compartilhar esta página"
+              title="Compartilhar via QR Code"
+              className="group relative grid h-12 w-12 sm:h-14 sm:w-14 shrink-0 place-items-center rounded-2xl border border-border bg-card/70 backdrop-blur transition-all duration-300 hover:-translate-y-0.5 hover:border-transparent hover:shadow-neon focus:outline-none focus-visible:ring-2 focus-visible:ring-ring"
             >
               <span
-                className="pointer-events-none absolute -inset-3 rounded-3xl opacity-40 blur-2xl transition-all duration-500 group-hover:opacity-90 group-hover:-inset-5"
-                style={{ background: "var(--gradient-neon)" }}
+                className="pointer-events-none absolute inset-0 rounded-2xl opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+                style={{ background: "var(--gradient-neon)", opacity: 0.15 }}
                 aria-hidden
               />
-              <span
-                className="pointer-events-none absolute inset-0 rounded-2xl opacity-70 transition-opacity duration-500 group-hover:opacity-100"
-                style={{ background: "var(--gradient-neon)" }}
-                aria-hidden
-              />
-              <span
-                className="pointer-events-none absolute inset-0 overflow-hidden rounded-2xl"
-                aria-hidden
-              >
-                <span className="absolute inset-y-0 -left-1/3 w-1/3 -skew-x-12 bg-gradient-to-r from-transparent via-white/15 to-transparent opacity-0 transition-all duration-700 group-hover:left-[120%] group-hover:opacity-100" />
-              </span>
-              <img
-                src={logoImg}
-                alt="Logotipo Francisco Chagas"
-                loading="lazy"
-                decoding="async"
-                className="relative h-14 sm:h-20 md:h-24 w-auto max-w-[80vw] rounded-2xl bg-card/80 px-3 sm:px-5 py-2 sm:py-3 object-contain backdrop-blur-md shadow-neon transition-all duration-500 group-hover:shadow-[0_0_60px_-5px_var(--neon)]"
-              />
-            </a>
-          </h1>
+              <QrCode className="relative h-6 w-6 sm:h-7 sm:w-7" style={{ color: "var(--neon)" }} strokeWidth={2.2} />
+            </button>
+          </div>
           <p className="mt-2 max-w-sm text-sm sm:text-base text-muted-foreground">
             Desenvolvedor & Runner — projetos, redes e contato em um único hub.
           </p>
