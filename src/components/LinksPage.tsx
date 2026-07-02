@@ -10,9 +10,15 @@ import {
   Trophy,
   MapPin,
   Sparkles,
+  QrCode,
+  X,
+  Share2,
 } from "lucide-react";
+import { QRCodeSVG } from "qrcode.react";
 import profileImg from "@/assets/profile-francisco.webp";
 import logoImg from "@/assets/logo-francisco.webp";
+
+const SHARE_URL = "https://conexoesfranciscochagas.lovable.app/";
 
 type LinkItem = {
   label: string;
