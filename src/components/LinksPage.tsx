@@ -149,13 +149,6 @@ export function LinksPage() {
                 className="h-full w-full rounded-full object-cover"
               />
             </div>
-            <span
-              className="absolute bottom-1 right-1 grid h-7 w-7 place-items-center rounded-full border-2 border-background"
-              style={{ background: "var(--neon)" }}
-              aria-label="Disponível"
-            >
-              <Sparkles className="h-3.5 w-3.5 text-primary-foreground" />
-            </span>
           </div>
 
           <div className="mt-6 flex items-center justify-center gap-3">
