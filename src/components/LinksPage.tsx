@@ -9,7 +9,7 @@ import {
   Activity,
   Trophy,
   MapPin,
-  Sparkles,
+  
   QrCode,
   X,
   Share2,
